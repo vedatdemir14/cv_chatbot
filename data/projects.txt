@@ -1,0 +1,27 @@
+Project: Spotify Integrated Venue Music & Social System (In Progress)
+Developing a platform using the Spotify API that allows venue customers to influence the music playback queue
+interactively. The system includes a real-time internal messaging feature to enable social interaction among
+customers within the venue.
+
+Project: Paws – AI-Powered Pet Care Mobile Application (In Progress)
+Building a mobile application featuring an AI-driven assistant that provides personalized pet care guidance.
+The project integrates computer vision and image processing techniques to analyze pet images for health
+monitoring and breed identification.
+
+Professional Experience:
+At Phyix Technologies Turkey, Vedat worked as an Automation and Scraping Engineer, where he developed
+automated scraping tools for Google Maps, Instagram, and LinkedIn. He implemented data extraction pipelines,
+automation bots, and a resource linking system using multilingual language models for medical content
+generation.
+
+At TFTrip Izmir, he worked as a Data Analyst, managing database systems, optimizing data workflows, performing
+data analysis, and developing machine learning projects to solve real-world problems.
+
+Project: AI CV Chatbot with RAG (Retrieval-Augmented Generation)
+Developed an intelligent chatbot system that answers questions about CV, skills, and projects using RAG technology.
+The system uses open-source LLMs (Mistral-7B via Ollama), FAISS vector database for semantic search, and 
+sentence-transformers for embeddings. Built a full-stack application with FastAPI backend and React frontend,
+featuring chat history persistence with localStorage, modern UI design, and conversational AI capabilities.
+The chatbot prevents hallucination by grounding all responses in the provided CV data and provides natural,
+human-like conversations in both English and Turkish.
+

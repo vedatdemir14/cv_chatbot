@@ -1,0 +1,17 @@
+Vedat Demir is a Computer Engineering student at Izmir Institute of Technology (IYTE), based in Izmir, Turkey.
+
+He has a strong foundation in Data Science, Artificial Intelligence, and Robotics, with hands-on experience in
+data analysis, machine learning pipelines, automation, and database management.
+
+Vedat is passionate about developing scalable software solutions using Python, PyTorch, MATLAB, and CUDA.
+He has experience working with large datasets, automation systems, and AI-powered applications.
+
+Education:
+- B.S. in Computer Engineering, Izmir Institute of Technology (2020 – Present)
+- High School Diploma, Sirri Yircalı Anatolian High School (2015 – 2020)
+
+Languages:
+- Turkish (Native)
+- English (C2)
+- German (A2)
+

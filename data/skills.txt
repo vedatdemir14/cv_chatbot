@@ -1,0 +1,16 @@
+Programming Languages and Tools:
+Python, Java, MATLAB, CUDA, JavaScript, HTML, CSS
+
+AI and Machine Learning Technologies:
+PyTorch, TensorFlow, Machine Learning, Deep Learning, Data Science, Computer Vision, Large Language Models (LLMs)
+
+Backend and Automation:
+FastAPI, Web Scraping, Selenium, Automation Pipelines, RAG (Retrieval Augmented Generation)
+
+Databases and Data Systems:
+SQL, NoSQL, Oracle Database, Vector Databases, Embeddings
+
+Additional Skills:
+API integration, data analysis, report generation, scalable system design
+
+
