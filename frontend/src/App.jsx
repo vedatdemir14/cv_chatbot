@@ -2,7 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import "./App.css";
 
 const STORAGE_KEY = "cv_chatbot_history";
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+// Backend URL is hardcoded here (not an env/secret) because it's a public
+// API endpoint meant to be called directly from the browser anyway, and
+// baking it in avoids GitHub Actions secret/env timing issues.
+const API_BASE_URL = "https://cvchatbot-production-4900.up.railway.app";
 
 export default function App() {
   const [messages, setMessages] = useState([]);
