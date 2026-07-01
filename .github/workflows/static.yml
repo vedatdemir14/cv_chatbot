@@ -1,12 +1,9 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Disabled: this duplicated/raced with deploy-frontend.yml (which builds the
+# Vite app properly). Kept only for manual/emergency use via workflow_dispatch.
+name: Deploy static content to Pages (disabled - use deploy-frontend.yml)
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
+  # Allows you to run this workflow manually from the Actions tab only
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages

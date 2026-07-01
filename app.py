@@ -1,20 +1,28 @@
+import os
 from fastapi import FastAPI
 from pydantic import BaseModel
 from rag import ask_question, generate_why_hire, generate_recruiter_summary
 from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI(
     title="AI CV Chatbot API",
     description="RAG-based personal CV chatbot using open-source LLMs",
     version="1.0.0"
-    
+
 )
+
+# Default local dev origins + any extra origins from the CORS_ORIGINS env var
+# (comma-separated), e.g. "https://<user>.github.io"
+default_origins = [
+    "http://localhost:5174",
+    "http://127.0.0.1:5174",
+    "http://localhost:5173",
+]
+extra_origins = [o.strip() for o in os.getenv("CORS_ORIGINS", "").split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5174",
-        "http://127.0.0.1:5174",
-        "http://localhost:5173",
-    ],
+    allow_origins=default_origins + extra_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -28,10 +36,11 @@ class QuestionRequest(BaseModel):
 class AnswerResponse(BaseModel):
     answer: str
 
+
 class RoleRequest(BaseModel):
     role: str
 
-    
+
 @app.get("/why-hire")
 def why_should_we_hire():
     answer = generate_why_hire()
@@ -48,6 +57,7 @@ def ask_cv_bot(request: QuestionRequest):
 def root():
     return {"status": "AI CV Chatbot API is running"}
 
+
 @app.post("/summary")
 def recruiter_summary(req: RoleRequest):
     summary = generate_recruiter_summary(req.role)
@@ -56,5 +66,5 @@ def recruiter_summary(req: RoleRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
-
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)

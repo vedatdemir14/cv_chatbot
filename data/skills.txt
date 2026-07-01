@@ -1,16 +1,13 @@
-Programming Languages and Tools:
-Python, Java, MATLAB, CUDA, JavaScript, HTML, CSS
+Technical Skills of Vedat Demir:
 
-AI and Machine Learning Technologies:
-PyTorch, TensorFlow, Machine Learning, Deep Learning, Data Science, Computer Vision, Large Language Models (LLMs)
+Programming Languages: Python, Java, MATLAB, CUDA, JavaScript, TypeScript, HTML, CSS, C, C++
 
-Backend and Automation:
-FastAPI, Web Scraping, Selenium, Automation Pipelines, RAG (Retrieval Augmented Generation)
+Frameworks & Tools: React, React Native, Expo, Node.js, Express, Spring Boot, Kubernetes, FastAPI, Docker, CI/CD, JWT, API Gateway, Git
 
-Databases and Data Systems:
-SQL, NoSQL, Oracle Database, Vector Databases, Embeddings
+AI & Machine Learning: PyTorch, TensorFlow, Computer Vision, RAG (Retrieval-Augmented Generation), LLMs (Large Language Models), Deep Learning
 
-Additional Skills:
-API integration, data analysis, report generation, scalable system design
+IoT & Hardware: ESP32, Arduino, Sensor Integration (PIR sensors, Load Cells), Embedded Systems
 
+Databases: SQL, NoSQL, PostgreSQL, Redis, Oracle, Vector Databases, Embeddings, Drizzle ORM
 
+Other areas of expertise: data analysis, machine learning pipelines, automation, web scraping, network infrastructure, industrial communication protocols, full-stack web development, mobile app development.

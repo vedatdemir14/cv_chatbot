@@ -1,22 +1,25 @@
-import requests
+import os
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
-
+from llm import get_llm_client
 
 VECTOR_DB_PATH = "vectorstore"
-OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL_NAME = "mistral"
 
 conversation_memory = []
 
 # Load vectorstore globally
 vectorstore = None
 
+# Single shared Groq client (reads GROQ_API_KEY / GROQ_MODEL from env)
+llm_client = get_llm_client()
+
+
 def get_vectorstore():
     global vectorstore
     if vectorstore is None:
         vectorstore = load_vectorstore()
     return vectorstore
+
 
 def load_vectorstore():
     embeddings = HuggingFaceEmbeddings(
@@ -48,9 +51,11 @@ QUESTION: {question}
 
 ANSWER (English, conversational):
 """
+
+
 def generate_recruiter_summary(role: str) -> str:
     vs = get_vectorstore()
-    docs = vs.similarity_search(role, k=4)  # Reduced from 6 to 4
+    docs = vs.similarity_search(role, k=4)
     context = "\n\n".join(d.page_content for d in docs)
 
     prompt = f"""
@@ -71,33 +76,20 @@ SUMMARY:
 
 
 def query_llm(prompt: str, temperature: float = 0.7, max_tokens: int = 300) -> str:
-    url = "http://localhost:11434/api/generate"
+    answer = llm_client.generate(prompt, max_tokens=max_tokens, temperature=temperature)
+    if answer is None:
+        return "⚠️ The AI backend is currently unavailable. Please check the GROQ_API_KEY configuration."
+    return answer
 
-    payload = {
-        "model": "mistral",
-        "prompt": prompt,
-        "stream": False,
-        "options": {
-            "temperature": temperature,
-            "num_predict": max_tokens,  # Reduced for faster responses
-            "top_p": 0.9,  # Nucleus sampling for faster generation
-        }
-    }
-
-    response = requests.post(url, json=payload, timeout=60)  # Reduced timeout
-    response.raise_for_status()
-
-    data = response.json()
-    return data["response"]
 
 def ask_question(question: str) -> str:
     vs = get_vectorstore()
-    docs = vs.similarity_search(question, k=3)  # Reduced from 5 to 3 for faster retrieval
+    docs = vs.similarity_search(question, k=3)
     context = "\n\n".join(d.page_content for d in docs)
 
     memory_context = ""
     if conversation_memory:
-        memory_context = "\n\nPrevious conversation:\n" + "\n".join(conversation_memory[-2:])  # Reduced from 3 to 2
+        memory_context = "\n\nPrevious conversation:\n" + "\n".join(conversation_memory[-2:])
         memory_context += "\n\nUse this context to make your response more natural."
 
     prompt = f"""
@@ -106,7 +98,7 @@ def ask_question(question: str) -> str:
 {build_prompt(context, question)}
 """
 
-    answer = query_llm(prompt, temperature=0.7, max_tokens=300)  # Faster generation
+    answer = query_llm(prompt, temperature=0.7, max_tokens=300)
 
     conversation_memory.append(f"Q: {question}\nA: {answer}")
     # Keep only last 4 conversations to avoid too long context
@@ -114,11 +106,12 @@ def ask_question(question: str) -> str:
         conversation_memory.pop(0)
 
     return answer
-    
+
+
 def generate_why_hire() -> str:
     vs = get_vectorstore()
     docs = vs.similarity_search(
-        "skills experience projects impact achievements", k=4  # Reduced from 6 to 4
+        "skills experience projects impact achievements", k=4
     )
     context = "\n\n".join(d.page_content for d in docs)
 
@@ -149,5 +142,3 @@ if __name__ == "__main__":
 
         response = ask_question(q)
         print("\n✅ Answer:\n", response)
-
-

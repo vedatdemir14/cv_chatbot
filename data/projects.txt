@@ -1,27 +1,45 @@
-Project: Spotify Integrated Venue Music & Social System (In Progress)
-Developing a platform using the Spotify API that allows venue customers to influence the music playback queue
-interactively. The system includes a real-time internal messaging feature to enable social interaction among
-customers within the venue.
+Project: BarberNearMe - Barber Discovery & Booking App (2025)
+- Built a cross-platform mobile application (Expo / React Native + TypeScript) enabling customers to discover nearby barbershops on an interactive map and book appointments.
+- Integrated Firebase Auth and Cloud Firestore for real-time data, with double-booking prevention via dynamic slot disabling.
+- Implemented filtering by proximity, rating, price, and availability alongside a review and rating system.
+Technologies: Expo, React Native, TypeScript, Firebase Auth, Cloud Firestore
 
-Project: Paws – AI-Powered Pet Care Mobile Application (In Progress)
-Building a mobile application featuring an AI-driven assistant that provides personalized pet care guidance.
-The project integrates computer vision and image processing techniques to analyze pet images for health
-monitoring and breed identification.
+Project: UTMS - Undergraduate Transfer Management System (2025)
+- Developed a centralized full-stack web platform to digitize and automate the undergraduate transfer process at IZTECH, serving applicants, ÖİDB staff, academic boards, and YDYO.
+- Built the frontend with React 18, Vite, and TypeScript; managed global state with Zustand and communicated with the backend via a typed Axios API client.
+- Backend powered by Node.js and Express with Drizzle ORM and PostgreSQL; secured with JWT-based authentication and role-based access control.
+Technologies: React 18, Vite, TypeScript, Zustand, Axios, Node.js, Express, Drizzle ORM, PostgreSQL, JWT
 
-Professional Experience:
-At Phyix Technologies Turkey, Vedat worked as an Automation and Scraping Engineer, where he developed
-automated scraping tools for Google Maps, Instagram, and LinkedIn. He implemented data extraction pipelines,
-automation bots, and a resource linking system using multilingual language models for medical content
-generation.
+Project: Smart Self-Cleaning Cat Litter Box (2025)
+- Designed an automated cat litter system using ESP32 for smart home integration.
+- Integrated PIR sensors for motion detection and Load Cells for real-time presence and waste monitoring.
+- Implemented an automated cleaning mechanism with a focus on hygiene and data-driven status updates.
+Technologies: ESP32, PIR sensors, Load Cells, Embedded Systems
 
-At TFTrip Izmir, he worked as a Data Analyst, managing database systems, optimizing data workflows, performing
-data analysis, and developing machine learning projects to solve real-world problems.
+Project: Smart Greenhouse Automation System (2026)
+- Developed an IoT-based embedded system to monitor and control environmental factors in real-time.
+- Integrated sensors for soil moisture, temperature, and humidity to automate irrigation and ventilation.
+Technologies: IoT, Embedded Systems, Sensor Integration
 
-Project: AI CV Chatbot with RAG (Retrieval-Augmented Generation)
-Developed an intelligent chatbot system that answers questions about CV, skills, and projects using RAG technology.
-The system uses open-source LLMs (Mistral-7B via Ollama), FAISS vector database for semantic search, and 
-sentence-transformers for embeddings. Built a full-stack application with FastAPI backend and React frontend,
-featuring chat history persistence with localStorage, modern UI design, and conversational AI capabilities.
-The chatbot prevents hallucination by grounding all responses in the provided CV data and provides natural,
-human-like conversations in both English and Turkish.
+Project: AI CV Chatbot with RAG (2025)
+- Developed an intelligent chatbot system that answers questions about CVs, skills, and projects using RAG (Retrieval-Augmented Generation) technology.
+- Uses a FAISS vector database, sentence-transformers embeddings, FastAPI backend, and Groq's hosted open-weight LLMs (openai/gpt-oss-120b) for fast, hallucination-free answers grounded only in the CV data.
+- Built a full-stack application with a React + Vite frontend, chat history persistence via localStorage, and a modern conversational UI. Frontend is deployed on GitHub Pages via GitHub Actions.
+Technologies: RAG, LLMs (Groq API), FAISS, FastAPI, Python, sentence-transformers, LangChain, React, Vite
 
+Project: Paws - AI-Powered Pet Care Mobile App (2026, in progress)
+- Building a mobile application featuring an AI-driven assistant for personalized pet care guidance.
+- Integrating Computer Vision and image processing to analyze pet visuals for health monitoring and breed identification.
+Technologies: Computer Vision, Image Processing, Mobile App Development
+
+Project: Spotify Integrated Venue Music & Social System (in progress)
+- Developing a platform using the Spotify API that allows venue customers to influence the music queue interactively.
+- Implementing a real-time internal messaging system to facilitate social interaction among customers.
+Technologies: Spotify API, Real-time Messaging
+
+Professional Experience Highlights:
+At Phyix Technologies (Turkey), Vedat worked as an Automation and Scraping Engineer, developing automated scraping tools for Google Maps, Instagram, and LinkedIn, and building a resource linking system using multilingual language models to semantically correlate medical data.
+
+At TFTrip (İzmir), he worked as a Data Analyst, managing database systems, optimizing data workflows, performing data analysis, and developing machine learning projects to solve real-world problems.
+
+At Ege Diferansiyel (İzmir), he completed a Network Infrastructure internship, supporting factory-wide network configuration and industrial communication systems.

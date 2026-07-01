@@ -1,17 +1,42 @@
-Vedat Demir is a Computer Engineering student at Izmir Institute of Technology (IYTE), based in Izmir, Turkey.
+Name: Vedat Demir
+Title: Computer Engineer
+Location: İzmir, Türkiye
+Phone: +90 543 571 0630
+Email: vedatdemir14@hotmail.com
+LinkedIn: vedatdemir14
+GitHub: vedatdemir14
 
-He has a strong foundation in Data Science, Artificial Intelligence, and Robotics, with hands-on experience in
-data analysis, machine learning pipelines, automation, and database management.
-
-Vedat is passionate about developing scalable software solutions using Python, PyTorch, MATLAB, and CUDA.
-He has experience working with large datasets, automation systems, and AI-powered applications.
+Professional Summary:
+Vedat Demir is a Computer Engineering graduate (2026) from İzmir Institute of Technology (IYTE) with a strong foundation in Data Science, AI, and Robotics. He is experienced in data analysis, machine learning pipelines, automation, and database management. He is passionate about developing scalable solutions using Python, PyTorch, MATLAB, and CUDA technologies.
 
 Education:
-- B.S. in Computer Engineering, Izmir Institute of Technology (2020 – Present)
-- High School Diploma, Sirri Yircalı Anatolian High School (2015 – 2020)
+- B.S. in Computer Engineering, İzmir Institute of Technology (IYTE), İzmir (2020-2026)
+- High School Diploma, Sırrı Yırcalı Anadolu Lisesi, Balıkesir (2015-2020)
+
+Work Experience:
+
+Automation and Scraping Engineer (Part-time), Phyix Technologies, Turkey (March 2025 - January 2026)
+- Developed automated scraping tools for Google Maps to detect newly indexed locations for data aggregation.
+- Engineered Instagram automation bots for location-based user identification and managed bulk messaging systems.
+- Implemented LinkedIn scraping algorithms to extract professional data and streamline lead generation.
+- Architected a resource linking system using Multilingual Language Models (LMs) to semantically correlate medical data.
+
+Network Infrastructure Intern, Ege Diferansiyel, İzmir (January 2025)
+- Observed and supported the configuration of factory-wide network infrastructure and industrial communication systems.
+- Assisted in the maintenance and troubleshooting of LAN/WAN components within a manufacturing environment.
+- Gained hands-on experience with industrial networking protocols and on-site hardware setup.
+
+Data Analyst, TFTrip, İzmir (November 2023 - June 2024)
+- Managed database systems and executed data optimization tasks to improve system efficiency.
+- Conducted data analysis and generated comprehensive reports to support decision-making processes.
+- Developed and implemented Machine Learning projects to solve real-world data problems.
 
 Languages:
-- Turkish (Native)
-- English (C2)
-- German (A2)
+- English: C1 (Native-like proficiency)
+- Turkish: Native
+- German: A2
 
+Certificates:
+- NoSQL Databases Course Certificate (2024)
+- Vector Databases and Embeddings Course Certificate (2024)
+- Data Science and Machine Learning Course (2022)

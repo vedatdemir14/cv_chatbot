@@ -42,8 +42,7 @@ jobs:
         working-directory: frontend
         env:
           VITE_BASE: "/${{ github.event.repository.name }}/"
-          # If you later host the backend publicly, set this as a repo secret and use it here:
-          # VITE_API_URL: "${{ secrets.VITE_API_URL }}"
+          VITE_API_URL: "${{ secrets.VITE_API_URL }}"
         run: npm run build
 
       - name: Upload artifact
