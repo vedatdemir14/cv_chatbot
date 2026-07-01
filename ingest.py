@@ -2,7 +2,7 @@ import os
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_core.documents import Document
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings import FastEmbedEmbeddings
 
 DATA_DIR = "data"
 VECTOR_DB_PATH = "vectorstore"
@@ -37,8 +37,10 @@ def split_documents(documents):
 
 
 def create_vectorstore(chunks):
-    embedding_model = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
+    # fastembed is ONNX-based (no torch), which keeps memory usage low enough
+    # to run on Render's free 512MB instances.
+    embedding_model = FastEmbedEmbeddings(
+        model_name="BAAI/bge-small-en-v1.5"
     )
 
     vectorstore = FAISS.from_documents(

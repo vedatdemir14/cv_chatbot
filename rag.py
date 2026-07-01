@@ -1,6 +1,6 @@
 import os
 from langchain_community.vectorstores import FAISS
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings import FastEmbedEmbeddings
 from llm import get_llm_client
 
 VECTOR_DB_PATH = "vectorstore"
@@ -22,8 +22,10 @@ def get_vectorstore():
 
 
 def load_vectorstore():
-    embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
+    # Must match the embedding model used in ingest.py (fastembed/ONNX,
+    # no torch -> low memory footprint)
+    embeddings = FastEmbedEmbeddings(
+        model_name="BAAI/bge-small-en-v1.5"
     )
 
     vectorstore = FAISS.load_local(
